@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define FILE_BUFFER_SIZE 256
+#include <string.h>
 
 void cat(char *filename) {
     FILE *file = fopen(filename, "r");
@@ -12,7 +12,7 @@ void cat(char *filename) {
             exit(EXIT_FAILURE);
         }
 
-        char buffer[FILE_BUFFER_SIZE];
+        char buffer[BUFSIZ];
 
         while (fgets(buffer, sizeof(buffer), file) != NULL) {
             printf("%s", buffer);
