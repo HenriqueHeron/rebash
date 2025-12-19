@@ -3,7 +3,7 @@
 #define FILE_BUFFER_SIZE 256
 
 void cat(char *filename) {
-    FILE* file = fopen(filename, "r");
+    FILE *file = fopen(filename, "r");
 
         if (file == NULL) {
             char errorMsg[256];

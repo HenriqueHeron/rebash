@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 bool touch(const char *filename) {
-    FILE* file = fopen(filename, "w");
+    FILE *file = fopen(filename, "w");
 
     if (file == NULL) {
         char error_buffer[256];

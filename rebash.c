@@ -5,6 +5,7 @@
 #include <ctype.h>
 #include <errno.h>
 
+#include "tools/ls.h"
 #include "tools/cat.h"
 #include "tools/rm.h"
 #include "tools/touch.h"
@@ -54,6 +55,12 @@ int main(int argc, char **argv) {
                 exit(EXIT_FAILURE);
             }
         }
+        return 0;
+    }
+
+    // Run ls
+    if (strcmp(command, "ls") == 0) {
+        ls(argv[2]);
         return 0;
     }
 
