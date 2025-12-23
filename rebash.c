@@ -3,12 +3,12 @@
 #include <stdbool.h>
 #include <string.h>
 #include <ctype.h>
-#include <errno.h>
 
 #include "tools/ls.h"
 #include "tools/cat.h"
 #include "tools/rm.h"
 #include "tools/touch.h"
+#include "tools/cd.h"
 
 #define ARG_BEGIN_IDX 2
 
@@ -61,6 +61,12 @@ int main(int argc, char **argv) {
     // Run ls
     if (strcmp(command, "ls") == 0) {
         ls(argv[2]);
+        return 0;
+    }
+
+    // Run cd
+    if (strcmp(command, "cd") == 0) {
+        cd(argv[2]);
         return 0;
     }
 
